@@ -2,6 +2,7 @@
 
             //console.log( win.scrollTop());
 
+
     /**
      * 
      *  Menu Text Hover -> Toggle Color
@@ -79,6 +80,7 @@
      * FadeIn Cards
      * 
      */
+
     var pfc = $('.position-first-card'),
         psc = $('.position-second-card'),
         ptc = $('.position-third-card');
@@ -87,10 +89,17 @@
         psc.hide();
         ptc.hide();
 
-        setTimeout(function() { pfc.fadeIn(2500); }, 1500 );
-        setTimeout(function() { psc.fadeIn(2500); }, 800 );
-        setTimeout(function() { ptc.fadeIn(2500); }, 2000 );
+    var flipCard = $('.position-first-card, .position-second-card, .position-third-card');
 
+
+    $(window).scroll(function(){
+        flipCard.each(function(){
+
+    var s = $(this).offset().top+$(this).outerHeight()/3;
+
+        $(window).scrollTop() + $(window).height() > s && pfc.delay(100).fadeIn(3000) 
+                                                       && psc.delay(1500).fadeIn(2000)
+                                                       && ptc.delay(2500).fadeIn(2500)})});
     
     /*
      *

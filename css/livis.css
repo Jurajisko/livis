@@ -431,7 +431,7 @@ label:hover .flip-card {
 
 .js-slidein {
   opacity: 0;
-  left: 75em;
+  left: 62.5em;
   transition: all 2.5s ease-in-out; }
 
 .js-slidein-visible {

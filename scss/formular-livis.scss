@@ -44,50 +44,6 @@ $font-family-1: 'DM Sans', sans-serif;
 	&:after { clear: both; }
 }
 
-// @include btn;
-@mixin btn {
-    line-height: em(20);
-    padding: em(20) em(30);
-    font: {
-        weight: 500;
-        }
-    margin: {
-        top: em(20);
-        right: em(30);
-        }
-    border-bottom-left-radius: em(30) 50%;
-    border-bottom-right-radius: em(30) 50%;
-    border-top-left-radius: em(30) 50%;
-    border-top-right-radius: em(30) 50%;
-
-    outline: none;
-    text-decoration: none;
-    color: $color-bg-page;
-
-}
-
-// @include menu
-@mixin menu {
-    margin: em(30) auto;
-    padding: {
-        left: 0;
-        }
-    li {
-        display: inline-block;
-        margin-left: em(20);
-        font: {
-            weight: 500;
-            }
-        &:last-child {
-            margin-right: 0;
-            }
-        a {
-            text-decoration: none;
-            outline: none;
-            }
-        }
-}
-
 // vykreslenie hranic elementov
 //*{outline: em(1) solid yellow;}
 

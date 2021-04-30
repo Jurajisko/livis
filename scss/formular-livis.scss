@@ -74,12 +74,6 @@ textarea {
     width: em(600);
 }
 
-use .a {
-	fill: #fff;
-}
-
-
-
 :focus {
     outline: none;
 }
@@ -92,53 +86,54 @@ use .a {
 }
 
 .form-group {
-    color: $color-dark;
-	font-size: em(15);
-    text-align: left;
-	position: relative;
+	width: 47%;
 	display: block;
-    width: 47%;
-	margin-bottom: em(48);
+	text-align: left;
+	font-size: em(15);
+    position: relative;
+	color: $color-dark;
+	margin-bottom: em(48, 15);
 	span {
-		font-size: em(15);
-        color: $color-dark;
-        opacity: 0.8;
-		position: absolute;
-		top: em(11);
-		transition: all .33s ease;
-		transform-origin: 0 0;
 		cursor: text;
+		opacity: 0.8;
+		top: em(11, 15);
+        color: $color-dark;
+		position: absolute;
+		transform-origin: 0 0;
+		transition: all .33s ease;
 		&.border,
 		&.border2 {
-			height: em(2);
-			display: block;
-			position: absolute;
-			width: 100%;
 			left: 0;
-			top: em(41);
+			width: 100%;
+			display: block;
+			height: em(2, 15);
+			position: absolute;
 			transform: scaleX(0);
-			transition: all .33s ease;
 			background: $color-dark;
+			transition: all .33s ease;
+			}
+		&.border {
+			top: em(39, 15);
 			}
 		&.border2 {
-			top: em(143);
-		}
+			top: em(126, 15);
+			}
 	}
 }
 
 .form-control {
-	border: none;
-	border-bottom: em(1) solid $color-mid;
-	display: block;
 	width: 100%;
-	height: em(43);
-	font-size: em(15);
+	border: none;
+	display: block;
 	background: none;
+	font-size: em(15);
+	height: em(43, 15);
 	font-family: "Montserrat-SemiBold";
+	border-bottom: em(1, 15) solid $color-mid;
 	&:focus, &:valid {
 		//border-bottom: em(1) solid $color-light;
 		& + span {
-			transform: translateY(em(-27)) scale(.8);
+			transform: translateY(em(-27, 15)) scale(.8);
 			& + .border,
 			& + .border2 {
 				transform: scaleX(1);
